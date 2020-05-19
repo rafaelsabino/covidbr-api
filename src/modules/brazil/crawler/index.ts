@@ -9,8 +9,6 @@ export const getData = (document: Document) => {
     return countryName === 'Brazil'
   })
 
-  if (!brazilRow) throw new Error('Internal error')
-
   const [, $totalCases, , $totalDeaths, , $totalRecovered, $activeCases] = Array.from(brazilRow.querySelectorAll('td'))
 
   const totalDeaths = formatCounter($totalDeaths)
